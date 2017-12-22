@@ -1,0 +1,20 @@
+ {{#.}}
+<li class="swipeout" data-fid="{{Fid}}">
+	<div class="swipeout-content">
+		<a href="js/personal/msgcontent.html?id={{Fid}}" class="item-link item-content">
+			<div class="item-inner">
+				<div class="item-title-row">
+					<div class="item-title">{{Title}}</div>
+					<div class="item-after">{{SendTime}}{{#unless HasRead}}<span class="badge bg-red"></span>{{/unless}}</div>
+				</div>
+				<div class="item-subtitle">系统消息</div>
+				<div class="item-text">{{MsgContent}}</div>
+			</div>
+		</a>
+	</div>
+	<div class="swipeout-actions-right">
+		<a href="#" data-fid="{{Fid}}" class="msg-mark-read bg-orange">已读</a>
+		<a href="#" data-confirm="确定删除本条消息?" class="msg-swipeout-delete swipeout-delete swipeout-overswipe">删除</a>
+	</div>
+</li>
+{{/.}}
